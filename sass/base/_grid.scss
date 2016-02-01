@@ -1,9 +1,18 @@
 /**
  *
- * Grid 
+ * Grid
  *
  */
 
+.container {
+  clear: both;
+  width: 100%;
+  @extend %clearfix;
+
+  &:before, &:after {
+    display: flex;
+  }
+}
 
 .container--flex {
   position: relative;
@@ -242,6 +251,10 @@
 
 @include media_query(sm) {
 
+  .container {
+    padding: 0 $sm-padding - $base-unit*2;
+  }
+
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11 {
     float: left;
     .container--flex  & {
@@ -405,6 +418,11 @@
 }
 
 @include media_query(md) {
+
+  .container {
+    padding: 0 $md-padding - 16;
+  }
+
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11 {
     float: left;
     .container--flex  & {
@@ -568,6 +586,10 @@
 }
 
 @include media_query(lg) {
+  .container {
+    padding: 0 $lg-padding - $base-unit*2;
+  }
+
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11 {
     float: left;
     .container--flex  & {
