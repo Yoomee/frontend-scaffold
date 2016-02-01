@@ -20,7 +20,7 @@ $sm-start:          768px   !default;
 $md-start:          993px   !default;
 $lg-start:          1200px  !default;
 $xl-start:          1400px  !default;
-$xxl-start:         1700px  !default
+$xxl-start:         1700px  !default;
 
 @mixin media-query($media-query) {
 
